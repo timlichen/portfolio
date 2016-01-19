@@ -16,6 +16,9 @@
 
     portfolio_app.config(function ($routeProvider) {
       $routeProvider
+        .when('/home',{
+            templateUrl: 'partials/home.html'
+        })
         .when('/about',{
             templateUrl: 'partials/about.html'
         })
@@ -35,7 +38,7 @@
             templateUrl: 'partials/nameAPI.html'
         })
         .otherwise({
-          redirectTo: '/projects'
+          redirectTo: '/home'
         });
     });
     </script>
@@ -43,15 +46,17 @@
     </head>
     <body>
 
-<ul class="navigation">
-    <li><a href="#/about">About Me</a></li>
-    <li><a href="#/projects">Projects</a></li>
-</ul>
+<div class="navCont">
+    <ul class="navigation">
+        <li id="navButton"><a href="#/home"><span class="navLinks">Home</span></a></li>
+        <li id="navButton"><a href="#/about"><span class="navLinks">About Me</span></a></li>
+        <li id="navButton"><a href="#/projects"><span class="navLinks">Projects</span></a></li>
+    </ul>
+</div>
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+    <label for="nav-trigger"></label>
 
-<input type="checkbox" id="nav-trigger" class="nav-trigger" />
-<label for="nav-trigger"></label>
-
-<div class="site-wrap">
+    <div class="site-wrap">
       <div class="container">
         <h1 id="nameHeader">TIM CHEN</h1>
         <h6 id="subNameHeader">Web Developer</h6>
@@ -62,13 +67,14 @@
                 <i class="fa fa-github-alt"></i></a> |
                 <a href="https://www.linkedin.com/in/tim-chen-9048a762">
                 <i class="fa fa-linkedin"></i></a> |
-                <a href="mailto:tim.li.chen@gmail.com?Subject=Hello!" target="_top">
+                <a href="mailto:tim.li.chen@gmail.com?Subject=Hello!"
+                target="_top">
                 <i class="fa fa-envelope-o"></i></a>
             </div>
         </div>
         <div ng-view=""></div>
 
+        </div>
     </div>
-</div>
     </body>
 </html>
