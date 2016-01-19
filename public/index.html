@@ -46,18 +46,23 @@
     </head>
     <body>
 
-<div class="navCont">
-    <ul class="navigation">
-        <li id="navButton"><a href="#/home"><span class="navLinks">Home</span></a></li>
-        <li id="navButton"><a href="#/about"><span class="navLinks">About Me</span></a></li>
-        <li id="navButton"><a href="#/projects"><span class="navLinks">Projects</span></a></li>
-    </ul>
+<div class="container">
+    <div class="row">
+        <div class="twelve columns">
+            <ul class="navigation">
+                <li id="navButton"><a href="#/home"><span class="navLinks">Home</span></a></li>
+                <li id="navButton"><a href="#/about"><span class="navLinks">About Me</span></a></li>
+                <li id="navButton"><a href="#/projects"><span class="navLinks">Projects</span></a></li>
+            </ul>
+        </div>
+    </div>
 </div>
-    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-    <label for="nav-trigger"></label>
 
-    <div class="site-wrap">
-      <div class="container">
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger"></label>
+
+<div class="site-wrap">
+    <div class="container">
         <h1 id="nameHeader">TIM CHEN</h1>
         <h6 id="subNameHeader">Web Developer</h6>
 
@@ -73,8 +78,7 @@
             </div>
         </div>
         <div ng-view=""></div>
-
-        </div>
     </div>
-    </body>
+</div>
+</body>
 </html>
