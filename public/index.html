@@ -42,8 +42,20 @@
 
     </head>
     <body>
+
+<ul class="navigation">
+    <li><a href="#/about">About Me</a></li>
+    <li><a href="#/projects">Projects</a></li>
+</ul>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger"></label>
+
+<div class="site-wrap">
       <div class="container">
-        <h1>TIM CHEN</h1>
+        <h1 id="nameHeader">TIM CHEN</h1>
+        <h6 id="subNameHeader">Web Developer</h6>
+
         <div class="row">
             <div class="four columns">
                 <a href="https://github.com/timlichen">
@@ -54,9 +66,9 @@
                 <i class="fa fa-envelope-o"></i></a>
             </div>
         </div>
-        <p><a href="#/about">About Me</a> | <a href="#/projects">Projects</a></p>
         <div ng-view=""></div>
 
     </div>
+</div>
     </body>
 </html>
