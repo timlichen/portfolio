@@ -4,12 +4,23 @@ img {
   width: auto\9; /* ie8 */
 }
 
-#projectImgaes {
+#techToolBox td {
+  vertical-align: top;
+}
+
+#techToolBox ul {
+  list-style-type: none;
+}
+
+#techToolBox th {
+  text-transform: uppercase;
+}
+
+#projectImages {
   text-align: center;
 }
 
 #imageCenter{
-  text-align: center;
   margin: auto;
 }
 
@@ -24,11 +35,6 @@ img {
   font-size: 31 pts;
   text-transform: uppercase;
   color: #00EAC4;
-}
-
-#techToolBox td:first-child {
-  padding-right: 7em;
-  vertical-align: top;
 }
 
 .header {
