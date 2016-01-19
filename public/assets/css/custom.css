@@ -1,3 +1,13 @@
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
+}
+
+#projectImgaes {
+  text-align: center;
+}
+
 #imageCenter{
   text-align: center;
   margin: auto;
@@ -77,6 +87,10 @@
 .nav-trigger {
     position: absolute;
     clip: rect(0, 0, 0, 0);
+}
+
+.nav-trigger + label, .site-wrap {
+    transition: top .2s;
 }
 
 label[for="nav-trigger"] {
