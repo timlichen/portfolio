@@ -42,6 +42,7 @@ img {
   font-size: 31 pts;
   text-transform: uppercase;
   color: #00EAC4;
+  margin-bottom: 0em;
 }
 
 .header {
@@ -68,6 +69,11 @@ img {
   display: inline;
 }
 
+.footer {
+
+  text-align: center;
+}
+
 /*BURGER NAVIGATION */
 @media only screen  and (min-width : 0px) {
   #navButtonMobile, #nav-trigger{
@@ -87,6 +93,7 @@ img {
     color: #00EAC4;
     vertical-align: bottom;
   }
+
 }
 
 
@@ -139,7 +146,8 @@ img {
   label[for="nav-trigger"] {
       position: fixed;
       top: 1.5em;
-      right: 1.5em;;
+      right: 1.5em;
+
       z-index: 2;
       width: 2em;
       height: 2em;
@@ -155,4 +163,26 @@ img {
   body {
       overflow-x: hidden;
   }
+}
+
+/*
+Sticky Footer Solution
+by Steve Hatcher
+http://stever.ca http://www.cssstickyfooter.com
+*/
+
+html, body, .wrapper {height: 100%;}
+
+body > .wrapper { height: auto; min-height: 100%; }
+
+/* must be same height as the footer */
+.wrapper2 { overflow: auto; padding-bottom: 3em; }
+
+.footer {
+    font-size: .5em;
+    position: relative;
+    margin-top: -3em; /* negative value of footer height */
+    height: 3em;
+    clear: both;
+    /*padding: 2em;*/
 }
