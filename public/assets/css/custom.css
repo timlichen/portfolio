@@ -25,7 +25,14 @@ img {
 }
 
 #nameHeader {
-  font-size: 82pts;
+  font-size: 3.5em;
+  color: #00EAC4;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+#helloHeader{
+  font-size: 2em;
   color: #00EAC4;
   padding-bottom: 0px;
   margin-bottom: 0px;
@@ -38,7 +45,6 @@ img {
 }
 
 .header {
-  text-transform: uppercase;
   font-size: 1.8rem;
   letter-spacing: .2rem;
   font-weight: 600;
@@ -56,28 +62,35 @@ img {
 }
 
 #navButton{
+  color: #00EAC4;
   font-size: 1.5em;
   padding-right: 2em;
   display: inline;
 }
 
 /*BURGER NAVIGATION */
-
-@media (min-width: 800px) {
-    #navButtonMobile, #nav-trigger{
-      display: none;
-    }
-
-   .navLinksDesk{
+@media only screen  and (min-width : 0px) {
+  #navButtonMobile, #nav-trigger{
+    display: none;
+  }
+  #spacer{
+    padding-right: 4em;
+  }
+  #navLinkDiv {
+    font-size: 1.52em;
+    text-align: right;
+  }
+  #navLinkDiv a{
+    text-decoration: none;
+  }
+  .navLinksDesk{
+    color: #00EAC4;
     vertical-align: bottom;
-    padding-right: .5em;
-    font-size:1.52em;
-    float: right;
-    }
+  }
 }
 
 
-@media (max-width: 800px) {
+@media screen and (min-device-width : 320px) and (max-device-width : 800px) {
 
   .navLinksDesk{
     display: none;
@@ -142,5 +155,4 @@ img {
   body {
       overflow-x: hidden;
   }
-
 }
