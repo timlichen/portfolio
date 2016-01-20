@@ -63,56 +63,84 @@ img {
 
 /*BURGER NAVIGATION */
 
-.navigation {
-    list-style: none;
-    background: #fff;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 0;
-    padding-top: 1.5em;
+@media (min-width: 800px) {
+    #navButtonMobile, #nav-trigger{
+      display: none;
+    }
+
+   .navLinksDesk{
+    vertical-align: bottom;
+    padding-right: .5em;
+    font-size:1.52em;
+    float: right;
+    }
 }
 
-.site-wrap {
-    min-width: 100%;
-    min-height: 100%;
-    background-color: #fff;
-    position: relative;
-    top: 0;
-    bottom: 100%;
-    left: 0;
-    z-index: 1;
-    padding-top: 1.75em;
-    background-size: 200%;
-}
 
-.nav-trigger {
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
-}
+@media (max-width: 800px) {
 
-.nav-trigger + label, .site-wrap {
-    transition: top .2s;
-}
+  .navLinksDesk{
+    display: none;
+  }
 
-label[for="nav-trigger"] {
-    position: fixed;
-    top: 1.5em;
-    right: 1.5em;;
-    z-index: 2;
-    width: 2em;
-    height: 2em;
-    cursor: pointer;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
-    background-size: contain;
-}
+  #navButtonMobile{
+    font-size: 1.5em;
+    padding-right: 2em;
+    display: inline;
+  }
 
-.nav-trigger:checked ~ .site-wrap {
-    top: 60px;
-}
+  .navigation {
+      list-style: none;
+      background: #fff;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+      padding-top: 1.5em;
+  }
 
-body {
-    overflow-x: hidden;
+  .site-wrap {
+      min-width: 100%;
+      min-height: 100%;
+      background-color: #fff;
+      position: relative;
+      top: 0;
+      bottom: 100%;
+      left: 0;
+      z-index: 1;
+      padding-top: 1.75em;
+      background-size: 200%;
+  }
+
+  .nav-trigger {
+      position: absolute;
+      clip: rect(0, 0, 0, 0);
+  }
+
+  .nav-trigger + label, .site-wrap {
+      transition: top .2s;
+  }
+
+  label[for="nav-trigger"] {
+      position: fixed;
+      top: 1.5em;
+      right: 1.5em;;
+      z-index: 2;
+      width: 2em;
+      height: 2em;
+      cursor: pointer;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+      background-size: contain;
+  }
+
+  .nav-trigger:checked ~ .site-wrap {
+      top: 60px;
+  }
+
+  body {
+      overflow-x: hidden;
+  }
+
 }

@@ -49,9 +49,9 @@
     <div class="row">
         <div class="twelve columns">
             <ul class="navigation">
-                <li id="navButton"><a href="#/home"><span class="navLinks">Home</span></a></li>
-                <li id="navButton"><a href="#/about"><span class="navLinks">About Me</span></a></li>
-                <li id="navButton"><a href="#/projects"><span class="navLinks">Projects</span></a></li>
+                <li id="navButtonMobile"><a href="#/home"><span class="navLinks">Home</span></a></li>
+                <li id="navButtonMobile"><a href="#/about"><span class="navLinks">About Me</span></a></li>
+                <li id="navButtonMobile"><a href="#/projects"><span class="navLinks">Projects</span></a></li>
             </ul>
         </div>
     </div>
@@ -62,8 +62,16 @@
 
 <div class="site-wrap">
     <div class="container">
-        <h1 id="nameHeader">TIM CHEN</h1>
-        <h6 id="subNameHeader">Web Developer</h6>
+        <div class="row">
+            <div class="twelve columns">
+                <a href="#/projects"><span class="navLinksDesk">Projects</span></a>
+                <a href="#/about"><span class="navLinksDesk">About Me</span></a>
+                <a href="#/home"><span class="navLinksDesk">Home </span></a>
+            <h1 id="nameHeader">TIM CHEN</h1>
+            <h6 id="subNameHeader">Web Developer</h6>
+            </div>
+        </div>
+
 
         <div ng-view=""></div>
         <div class="row">
