@@ -1,5 +1,5 @@
 {
-  "name": "orders_customers",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -11,8 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.14.1",
-    "express": "^4.13.3",
-    "mongoose": "^4.2.9",
-    "mongoose-unique-validator": "^0.6.2"
+    "express": "^4.13.3"
   }
 }
