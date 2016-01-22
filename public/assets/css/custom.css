@@ -78,8 +78,9 @@ img {
 }
 
 #footerText {
-  font-size: 3em;
+  font-size: 1.5em;
   text-align: center;
+  vertical-align: bottom;
 }
 
 #footerIcon{
