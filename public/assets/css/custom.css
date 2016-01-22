@@ -1,6 +1,9 @@
 #headers{
   padding-bottom: 1em;
 }
+a{
+  text-decoration: none;
+}
 img {
   max-width: 100%;
   height: auto;
@@ -42,10 +45,11 @@ img {
 }
 
 #subNameHeader{
-  font-size: 31 pts;
+  padding-left: .3em;
+  font-size: 1.2em;
   text-transform: uppercase;
   color: #00EAC4;
-  margin-bottom: 0em;
+  padding-bottom: 1em;
 }
 
 .header {
@@ -73,37 +77,128 @@ img {
   display: inline;
 }
 
-.footer {
-
+#footerText {
+  font-size: 3em;
   text-align: center;
 }
 
-/*BURGER NAVIGATION */
-@media only screen  and (min-width : 0px) {
-  #navButtonMobile, #nav-trigger{
-    display: none;
+#footerIcon{
+  text-align: left;
+  padding: .2em;
+  font-size: 6em;
+}
+
+.navLinksDesk{
+    color: #00EAC4;
+    vertical-align: bottom;
   }
   #spacer{
     padding-right: 4em;
   }
+
+.chevron {
+  font-size: 60px;
+  transform: rotate(0deg);
+  display:inline-block;
+  width: .5em;
+  height: .8em;
+  vertical-align: bottom;
+  position:relative;
+}
+.chevron:before,
+.chevron:after {
+    display:block;
+    content:"";
+    width:0;
+    height:0em;
+    border-style:solid;
+    position:absolute;
+}
+.chevron:before {
+    right:0;
+    border-width:.4em 0 .4em .4em;
+    border-color:transparent transparent transparent #00EAC4;
+}
+.chevron:after {
+    left:0;
+    border-width:.4em 0 .4em .4em;
+    border-color:transparent transparent transparent #fff;
+}
+
+  #navChev{
+    float: right;
+  }
+
+/*BURGER NAVIGATION */
+@media screen and (min-width: 1251px)  {
+
+  #navButtonMobile, #nav-trigger, .chevronMobile{
+    display: none;
+  }
   #navLinkDiv {
+    padding-top: .7em;
     font-size: 1.52em;
-    text-align: right;
+    text-align: center;
   }
   #navLinkDiv a{
     text-decoration: none;
   }
-  .navLinksDesk{
-    color: #00EAC4;
-    vertical-align: bottom;
-  }
 
 }
 
+@media screen and (max-width: 1250px) {
 
-@media screen and (min-device-width : 320px) and (max-device-width : 800px) {
+  #navButtonMobile, #nav-trigger, .chevronMobile{
+      display: none;
+    }
+  #subNameHeader{
+    padding-left: .3em;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #00EAC4;
+    margin-bottom: 0em;
+    padding-bottom: 0em;
+  }
+}
 
-  .navLinksDesk{
+@media screen and (max-device-width : 799px) {
+
+  .chevronMobile {
+    font-size: 60px;
+    transform: rotate(-90deg);
+    display:inline-block;
+    width: .5em;
+    height: .8em;
+    vertical-align: bottom;
+  position:relative;
+  }
+  .chevronMobile:before,
+  .chevronMobile:after {
+      display:block;
+      content:"";
+      width:0;
+      height:0em;
+      border-style:solid;
+      position:absolute;
+  }
+  .chevronMobile:before {
+      right:0;
+      border-width:.4em 0 .4em .4em;
+      border-color:transparent transparent transparent #00EAC4;
+  }
+  .chevronMobile:after {
+      left:0;
+      border-width:.4em 0 .4em .4em;
+      border-color:transparent transparent transparent #fff;
+  }
+
+
+
+  #nameHeader{
+    font-size: 2.5em;
+  }
+
+  .navLinksDesk, .chevron{
     display: none;
   }
 
@@ -180,12 +275,12 @@ html, body, .wrapper {height: 100%;}
 body > .wrapper { height: auto; min-height: 100%; }
 
 /* must be same height as the footer */
-.wrapper2 { overflow: auto; padding-bottom: 3em; }
+.wrapper2 { overflow: auto; padding-bottom: 13em; }
 
 .footer {
     font-size: .5em;
     position: relative;
-    margin-top: -3em; /* negative value of footer height */
+    margin-top: -13em; /* negative value of footer height */
     height: 3em;
     clear: both;
     /*padding: 2em;*/
