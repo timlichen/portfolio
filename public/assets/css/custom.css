@@ -1,3 +1,6 @@
+body {
+  background-color: #FCFCFC;
+}
 #headers{
   padding-bottom: 1em;
 }
@@ -126,9 +129,16 @@ img {
     border-color:transparent transparent transparent #fff;
 }
 
-  #navChev{
-    float: right;
-  }
+#navChev{
+  float: right;
+}
+
+#mobileImage{
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*background-color: red;*/
+}
 
 /*BURGER NAVIGATION */
 @media screen and (min-width: 1251px)  {
@@ -160,6 +170,9 @@ img {
     margin-bottom: 0em;
     padding-bottom: 0em;
   }
+  #navLinkDiv{
+    padding-left: .3em;
+  }
 }
 
 @media screen and (max-device-width : 799px) {
@@ -171,7 +184,7 @@ img {
     width: .5em;
     height: .8em;
     vertical-align: bottom;
-  position:relative;
+    position:relative;
   }
   .chevronMobile:before,
   .chevronMobile:after {
@@ -209,7 +222,7 @@ img {
 
   .navigation {
       list-style: none;
-      background: #fff;
+      background: #FCFCFC;
       position: absolute;
       top: 0;
       right: 0;
@@ -222,7 +235,7 @@ img {
   .site-wrap {
       min-width: 100%;
       min-height: 100%;
-      background-color: #fff;
+      background-color: #FCFCFC;
       position: relative;
       top: 0;
       bottom: 100%;
@@ -280,7 +293,8 @@ body > .wrapper { height: auto; min-height: 100%; }
     font-size: .5em;
     position: relative;
     margin-top: -13em; /* negative value of footer height */
-    height: 3em;
+    height: 6em;
     clear: both;
     /*padding: 2em;*/
 }
+
