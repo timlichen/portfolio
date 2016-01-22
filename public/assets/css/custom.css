@@ -14,7 +14,12 @@ img {
   width: auto\9; /* ie8 */
 }
 
+#techToolBox{
+  margin-bottom: 0px;
+}
+
 #techToolBox td {
+  border-bottom: none;
   vertical-align: top;
 }
 
@@ -23,7 +28,12 @@ img {
 }
 
 #techToolBox th {
+
   text-transform: uppercase;
+}
+
+#aboutText{
+  padding-top: 12px;
 }
 
 #projectImages {
@@ -67,6 +77,13 @@ img {
 
 .docs-header {
   text-transform: uppercase;
+  font-size: 1.8rem;
+  letter-spacing: .2rem;
+  font-weight: 600;
+}
+
+.docs-sub-header {
+  text-transform: uppercase;
   font-size: 1.4rem;
   letter-spacing: .2rem;
   font-weight: 600;
@@ -98,7 +115,6 @@ img {
 
 .navLinksDesk, .navLinks{
     color: #676767;
-    vertical-align: bottom;
   }
   #spacer{
     padding-right: 4em;
