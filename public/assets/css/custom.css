@@ -1,6 +1,10 @@
 body {
   background-color: #FCFCFC;
 }
+
+#contributions{
+  padding-left: 150px
+}
 #headers{
   padding-bottom: 1em;
 }
@@ -30,6 +34,8 @@ img {
 }
 
 #imageCenter{
+  padding-bottom: 25px;
+  text-align: center;
   margin: auto;
 }
 
@@ -56,6 +62,7 @@ img {
 }
 
 .header {
+  margin-bottom: 25px;
   font-size: 1.8rem;
   letter-spacing: .2rem;
   font-weight: 600;
@@ -81,7 +88,7 @@ img {
 }
 
 #footerText {
-  font-size: 1.5em;
+  font-size: 1em;
   text-align: center;
   vertical-align: bottom;
 }
@@ -137,11 +144,11 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  /*background-color: red;*/
 }
 
-/*BURGER NAVIGATION */
+
 @media screen and (min-width: 1251px)  {
+
 
   #navButtonMobile, #nav-trigger, .chevronMobile{
     display: none;
@@ -290,7 +297,7 @@ body > .wrapper { height: auto; min-height: 100%; }
 .wrapper2 { overflow: auto; padding-bottom: 13em; }
 
 .footer {
-    font-size: .5em;
+    font-size: .3em;
     position: relative;
     margin-top: -13em; /* negative value of footer height */
     height: 6em;
