@@ -2,9 +2,6 @@ body {
   background-color: #FCFCFC;
 }
 
-#contributions{
-  padding-left: 150px
-}
 #headers{
   padding-bottom: 1em;
 }
@@ -148,6 +145,10 @@ img {
 
 
 @media screen and (min-width: 1251px)  {
+
+  #contributions{
+    padding-left: 150px
+  }
 
 
   #navButtonMobile, #nav-trigger, .chevronMobile{
