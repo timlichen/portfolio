@@ -80,3 +80,26 @@
     <div class="six columns">
     </div>
 </div>
+
+    <form name="emailForm">
+        <div class="group">
+          <label>To</label>
+          <input type="email" name="to" ng-model="email.to" ng-required="true">
+        </div>
+        <div>
+          <label>From</label>
+          <input type="email" name="from" ng-model="email.from" ng-required="true">
+        </div>
+        <div>
+          <label>Subject</label>
+          <input type="text" name="subject" ng-model="email.subject" ng-required="true">
+        </div>
+        <div>
+          <label>Text</label>
+            <textarea ng-model="email.text" name="text" placeholder="Enter Text Here.."></textarea>
+        </div>
+
+        <button id="emailSubmitBn" type="submit" ng-click="submitEmail()">
+            Submit
+        </button>
+    </form>

@@ -8,11 +8,17 @@ portfolio_app.factory('about_Factory', function($http){
 })
 
 //ORDERS CONTROLLER
-portfolio_app.controller('portfolio_app', function ($scope, about_Factory){
+portfolio_app.controller('portfolio_app', function ($scope, $http, about_Factory){
 
-$scope.languages = [];
-$scope.frameworks = [];
-
-$scope.customerNames = [];
-
+$scope.submitEmail = function() {
+        console.log($scope.email);
+        //Request
+        $http.post('/email', $scope.email)
+        .success(function(data, status) {
+            console.log("Sent ok");
+        })
+        .error(function(data, status) {
+            console.log("Error");
+        })
+    };
 })
