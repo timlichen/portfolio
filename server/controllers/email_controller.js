@@ -10,9 +10,9 @@ var transport = nodemailer.createTransport(mandrillTransport({
 module.exports = (function() {
   return {
     send_email: function(req, res){
-      console.log(req.body.from)
+      // console.log(req.body.from)
       if(req.body.from == null || req.body.text == null){
-        console.log("error");
+        res.send("");
       } else {
         transport.sendMail({
           from: 'iamtim@timlichen.com',
@@ -21,8 +21,10 @@ module.exports = (function() {
           text: "FROM: " + req.body.from + " - " + req.body.text
         }, function(err, info) {
           if (err) {
+            res.send("Oops, message failed to send.");
             console.error(err);
           } else {
+            res.send("Success, message sent!");
             console.log(info);
           }
         });

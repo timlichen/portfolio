@@ -273,7 +273,7 @@ select:focus {
   outline: 0; }
 label,
 legend {
-  padding-left: 12px;
+  padding-top: 12px;
   display: block;
   margin-bottom: .5rem;
   font-weight: 600; }

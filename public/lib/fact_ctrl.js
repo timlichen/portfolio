@@ -11,14 +11,14 @@ portfolio_app.factory('about_Factory', function($http){
 portfolio_app.controller('portfolio_app', function ($scope, $http, about_Factory){
 
 $scope.submitEmail = function() {
-        console.log($scope.email);
+        // console.log($scope.email);
         //Request
         $http.post('/email', $scope.email)
         .success(function(data, status) {
-            console.log("Sent ok");
+            $scope.success = data;
         })
         .error(function(data, status) {
-            console.log("Error");
+            $scope.error = "Error, message not sent";
         })
     };
 })

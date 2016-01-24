@@ -1,5 +1,4 @@
 <div ng-controller="portfolio_app">
-
 <div class="row">
 
   <div class="six columns">
@@ -80,6 +79,8 @@
 <hr>
   <div class="twelve columns">
     <h1 id="helloHeader">Get in Touch!</h1>
+    <p id="contactRtn">{{error}}</p>
+    <p id="contactRtn">{{success}}</p>
   </div>
 </div>
 <div class="row">
@@ -100,5 +101,7 @@
             Submit
         </button>
     </form>
+    <hr/>
+    <!-- Pristine: {{emailForm.$pristine}} -->
   </div>
 </div>
