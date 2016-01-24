@@ -10,16 +10,19 @@ var transport = nodemailer.createTransport(mandrillTransport({
 module.exports = (function() {
   return {
     send_email: function(req, res){
-      // console.log(req.body.from)
+
+      var mailOptions = {
+        from: 'Contact Form <iamtim@timlichen.com>',
+        to: 'iamtim@timlichen.com',
+        replyto: req.body.from,
+        subject: "FROM: " + req.body.from + " - " + req.body.subject,
+        text: "FROM: " + req.body.from + " - " + req.body.text
+      };
+
       if(req.body.from == null || req.body.text == null){
         res.send("");
       } else {
-        transport.sendMail({
-          from: 'iamtim@timlichen.com',
-          to: 'iamtim@timlichen.com',
-          subject: "FROM: " + req.body.from + " - " + req.body.subject,
-          text: "FROM: " + req.body.from + " - " + req.body.text
-        }, function(err, info) {
+        transport.sendMail(mailOptions, function(err, info) {
           if (err) {
             res.send("Oops, message failed to send.");
             console.error(err);
@@ -32,3 +35,11 @@ module.exports = (function() {
     } //END send_email
   } // END return
 })(); // END module.exports function
+
+
+// {
+//           from: 'iamtim@timlichen.com',
+//           to: 'iamtim@timlichen.com',
+//           subject: "FROM: " + req.body.from + " - " + req.body.subject,
+//           text: "FROM: " + req.body.from + " - " + req.body.text
+//         }
