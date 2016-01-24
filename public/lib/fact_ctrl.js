@@ -17,8 +17,5 @@ $scope.submitEmail = function() {
         .success(function(data, status) {
             $scope.success = data;
         })
-        .error(function(data, status) {
-            $scope.error = "Error, message not sent";
-        })
     };
 })
