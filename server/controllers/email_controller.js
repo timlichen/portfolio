@@ -14,7 +14,7 @@ module.exports = (function() {
       var mailOptions={
          to : req.body.to,
          subject : req.body.subject,
-         text : req.body.text
+         text : req.body.text + " " +req.body.from
       }
       console.log(mailOptions);
         smtpTransport.sendMail(mailOptions, function(error, response){
