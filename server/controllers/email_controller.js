@@ -19,18 +19,23 @@ var transport = nodemailer.createTransport(mandrillTransport({
 module.exports = (function() {
   return {
     send_email: function(req, res){
-      transport.sendMail({
-        from: 'iamtim@timlichen.com',
-        to: 'iamtim@timlichen.com',
-        subject: "FROM: " + req.body.from + " - " + req.body.subject,
-        text: "FROM: " + req.body.from + " - " + req.body.text
-      }, function(err, info) {
-        if (err) {
-          console.error(err);
-        } else {
-          console.log(info);
-        }
-      });
+      console.log(req.body.from)
+      if(req.body.from == null || req.body.text == null){
+        console.log("error");
+      } else {
+        transport.sendMail({
+          from: 'iamtim@timlichen.com',
+          to: 'iamtim@timlichen.com',
+          subject: "FROM: " + req.body.from + " - " + req.body.subject,
+          text: "FROM: " + req.body.from + " - " + req.body.text
+        }, function(err, info) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log(info);
+          }
+        });
+      }
   } //END send_email
 
     //   var mailOptions={
