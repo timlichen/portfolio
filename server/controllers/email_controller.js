@@ -20,10 +20,10 @@ module.exports = (function() {
   return {
     send_email: function(req, res){
       transport.sendMail({
-        from: req.body.from,
-        to: req.body.to,
-        subject: req.body.subject,
-        html: req.body.text + " " +req.body.from
+        from: 'iamtim@timlichen.com',
+        to: 'iamtim@timlichen.com',
+        subject: "FROM: " + req.body.from + " - " + req.body.subject,
+        text: "FROM: " + req.body.from + " - " + req.body.text
       }, function(err, info) {
         if (err) {
           console.error(err);
