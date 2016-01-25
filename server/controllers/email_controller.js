@@ -19,7 +19,7 @@ module.exports = (function() {
         text: "FROM: " + req.body.from + " - " + req.body.text
       };
 
-      if(req.body.from == null || req.body.text == null){
+      if(req.body.from == undefined || req.body.text == "" || req.body.from == null){
         res.send("");
       } else {
         transport.sendMail(mailOptions, function(err, info) {

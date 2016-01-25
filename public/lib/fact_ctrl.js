@@ -5,10 +5,15 @@ portfolio_app.factory('portfolio_Factory', function($http){
   var factory = {};
     factory.sendEmail = function(emailData, callback){
       console.log(emailData);
-      $http.post('/email', emailData)
-      .success(function(data, status) {
-          callback(data);
-      })
+
+if(emailData == undefined){
+      console.log("no");
+    } else {
+        $http.post('/email', emailData)
+          .success(function(data, status) {
+            callback(data);
+        })
+      }
     }
   return factory;
 })
@@ -17,8 +22,9 @@ portfolio_app.factory('portfolio_Factory', function($http){
 portfolio_app.controller('portfolio_app', function ($scope, portfolio_Factory){
 
 $scope.submitEmail = function() {
-    portfolio_Factory.sendEmail($scope.email, function(data){
-      $scope.success = data;
-    });
+      portfolio_Factory.sendEmail($scope.email, function(data){
+        console.log(data);
+        $scope.success = "Success, message sent!";
+      });
   };
 })
