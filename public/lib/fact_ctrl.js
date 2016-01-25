@@ -4,9 +4,9 @@ var portfolio_app = angular.module('portfolio_app', ['ngRoute']);
 portfolio_app.factory('portfolio_Factory', function($http){
   var factory = {};
     factory.sendEmail = function(emailData, callback){
-      console.log(emailData);
+      console.log(emailData.from);
 
-if(emailData == undefined){
+if(emailData == undefined || !emailData.text){
       console.log("no");
     } else {
         $http.post('/email', emailData)
