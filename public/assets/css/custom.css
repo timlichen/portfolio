@@ -2,6 +2,10 @@ body {
   background-color: #FCFCFC;
 }
 
+#contactForm {
+  padding-top: 12px;
+}
+
 #contactRtn{
   padding-left: 1em;
   margin: 0px;
@@ -170,8 +174,6 @@ img {
   #contributions{
     padding-left: 150px
   }
-
-
   #navButtonMobile, #nav-trigger, .chevronMobile{
     display: none;
   }
