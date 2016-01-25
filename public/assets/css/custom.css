@@ -20,7 +20,6 @@ a{
 img {
   max-width: 100%;
   height: auto;
-  width: auto\9; /* ie8 */
 }
 
 #techToolBox{
@@ -248,17 +247,18 @@ img {
   #navButtonMobile{
     font-size: 1.5em;
     padding-right: 2em;
-    display: inline;
+    display: block;
   }
 
   .navigation {
       list-style: none;
-      background: #FCFCFC;
-      position: absolute;
+      /*background-color: green;*/
+      background-color: #FCFCFC;
+      position: fixed;
       top: 0;
       right: 0;
       bottom: 0;
-      left: 0;
+      left: 1;
       z-index: 0;
       padding-top: 1.5em;
   }
@@ -270,10 +270,11 @@ img {
       position: relative;
       top: 0;
       bottom: 100%;
-      left: 0;
+      /*Change here to determine shift location*/
+      right: 0;
       z-index: 1;
       padding-top: 1.75em;
-      background-size: 200%;
+      /*background-size: 200%;*/
   }
 
   .nav-trigger {
@@ -282,7 +283,7 @@ img {
   }
 
   .nav-trigger + label, .site-wrap {
-      transition: top .2s;
+      transition: right .2s;
   }
 
   label[for="nav-trigger"] {
@@ -298,8 +299,12 @@ img {
       background-size: contain;
   }
 
+  .nav-trigger:checked + label {
+    right: 215px;
+  }
+
   .nav-trigger:checked ~ .site-wrap {
-      top: 60px;
+    right: 200px;
   }
 
   body {
