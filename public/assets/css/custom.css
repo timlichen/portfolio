@@ -97,9 +97,11 @@ img {
   font-weight: 600;
 }
 
+#iphonePlace:hover { transform: scale(1.1); }
+#iphonePlace { transition: all .2s ease-in-out; }
 #iphonePlace{
   text-align: center;
-  max-width: 30em;
+  max-width: 28em;
 }
 
 #navButton{
