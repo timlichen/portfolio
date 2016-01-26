@@ -306,10 +306,10 @@ img {
     background-size: contain;
   }
   .nav-trigger:checked + label {
-    right: 16.1em;
+    right: 230px;
   }
   .nav-trigger:checked ~ .site-wrap {
-    right: 200px;
+    right: 155px;
   }
   body {
       overflow-x: hidden;
