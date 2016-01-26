@@ -1,160 +1,92 @@
 <!DOCTYPE html>
 <html ng-app="portfolio_app">
-  <head>
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/skeleton.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/custom.css">
-    <!-- <link rel="stylesheet" type="text/css" href="/assets/css/custom.min.css"> -->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
-    <script src="./lib/fact_ctrl.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
-    <script>
-    var counter = 0;
-    $( document ).ready(function() {
-
-        $("#chevLink").on("click", function(){
-            var arr = ["#/hearthstone", "#/prodDash" ,"#/nameAPI", "#/miniGames"];
-            if(counter < 4) {
-                $("#chevLink").attr('href', arr[counter++]);
-            } else {
-                counter = 0;
-            }
-        });
-
-    if ($('.back-to-top').length) {
-        var scrollTrigger = 100, // px
-            backToTop = function () {
-                var scrollTop = $(window).scrollTop();
-                if (scrollTop > scrollTrigger) {
-                    $('#back-to-top').addClass('show');
-                } else {
-                    $('#back-to-top').removeClass('show');
-                }
-            };
-        backToTop();
-        $(window).on('scroll', function () {
-            backToTop();
-        });
-        $('.back-to-top').on('click', function (e) {
-            e.preventDefault();
-            $('html,body').animate({
-                scrollTop: 0
-            }, 700);
-        });
-    }
-    });
-    </script>
-
-    <script>
-
-    // var portfolio_app = angular.module('portfolio_app', ['ngRoute']);
-
-    portfolio_app.config(function ($routeProvider) {
-      $routeProvider
-        .when('/about',{
-            templateUrl: 'partials/about.html'
-        })
-        .when('/projects',{
-            templateUrl: 'partials/projects.html'
-        })
-        .when('/hearthstone',{
-            templateUrl: 'partials/hearthstone.html'
-        })
-        .when('/prodDash',{
-            templateUrl: 'partials/prodDash.html'
-        })
-        .when('/miniGames',{
-            templateUrl: 'partials/miniGames.html'
-        })
-        .when('/nameAPI',{
-            templateUrl: 'partials/nameAPI.html'
-        })
-        .otherwise({
-          redirectTo: '/projects'
-        });
-    });
-    </script>
-
-    </head>
+<head>
+  <title>Tim Chen's Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/custom.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/assets/css/custom.min.css"> -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="./lib/fact_ctrl.js"></script>
+  <script src="./lib/ganalytics.js"></script>
+  <script src="./lib/pageTurner.js"></script>
+  <script src="./lib/partialsRouting.js"></script>
+</head>
 <body>
-<div class="wrapper">
-<div class="wrapper2">
-<div class="container">
-    <div class="row">
-        <div class="twelve columns">
+  <div class="wrapper">
+    <div class="wrapper2">
+      <div class="container">
+        <div class="row">
+          <div class="twelve columns">
             <ul class="navigation" >
-                <li id="navButtonMobile"><a href="#/projects"><span class="navLinks">Projects</span></a></li>
-                <li id="navButtonMobile"><a href="#/about"><span class="navLinks">About Me</span></a></li>
+              <li class="navButtonMobile">
+                <a href="#/projects">
+                  <span class="navLinks">Projects</span>
+                </a>
+              </li>
+              <li class="navButtonMobile">
+                <a href="#/about">
+                  <span class="navLinks">About Me</span>
+                </a>
+              </li>
             </ul>
+          </div>
         </div>
-    </div>
-</div>
-
-<input type="checkbox" id="nav-trigger" class="nav-trigger" />
-<label for="nav-trigger"></label>
-
-<div class="site-wrap">
-    <div class="container">
-        <div class="row" id="parentHeader">
+      </div>
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger"></label>
+      <div class="site-wrap">
+        <div class="container">
+          <div class="row" id="parentHeader">
             <div class="six columns" id="headers">
-                <a href="/"><h1 id="nameHeader">Tim Chen</h1></a>
-                <h6 id="subNameHeader">Web Developer</h6>
+              <a href="/">
+                <h1 id="nameHeader">Tim Chen</h1>
+              </a>
+              <h6 id="subNameHeader">Web Developer</h6>
             </div>
-            <div class="six columns" id="navLinkDiv">
-                <a href="#/projects"><span class="navLinksDesk" id="spacer">Projects</span></a>
-                <a href="#/about"><span class="navLinksDesk">About & Contact</span></a>
-            </div>
+          <div class="six columns" id="navLinkDiv">
+            <a href="#/projects">
+              <span class="navLinksDesk" id="spacer">Projects</span>
+            </a>
+            <a href="#/about">
+              <span class="navLinksDesk">About & Contact</span>
+            </a>
+          </div>
         </div>
-
-
-        <div ng-view=""></div>
-        <div class="row">
-            <div class="twelve columns">
-            </div>
+          <div ng-view=""></div>
         </div>
+      </div>
     </div>
-</div>
-</div>
-</div>
-
-
-
-<div class="footer">
-
-
+  </div>
+  <div class="footer">
     <div class="container">
-    <a href="https://github.com/timlichen">
-    <i id="footerIcon" class="fa fa-github-alt"></i></a>
-    <a href="https://www.linkedin.com/in/tim-chen-9048a762">
-    <i id="footerIcon" class="fa fa-linkedin"></i></a>
-    <a href="#" id="chevLink"><span id="navChev"><i class="chevron"></i></span></a>
-    <a href="#" class="back-to-top" title="Back to top" id="chevLinkMobile"><span id="navChev"><i class="chevronMobile"></i></span></a>
+      <a href="https://github.com/timlichen">
+        <i id="ghubIcon" class="fa fa-github-alt"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/tim-chen-9048a762">
+        <i id="linkIcon" class="fa fa-linkedin"></i>
+      </a>
+      <a href="#" id="chevLink">
+        <span class="navChev">
+          <i class="chevron"></i>
+        </span>
+      </a>
+      <a href="#" class="back-to-top" title="Back to top" id="chevLinkMobile">
+        <span class="navChev">
+          <i class="chevronMobile"></i>
+        </span>
+      </a>
     </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns" id="footerText">
+        <span >© 2016 Tim Chen</span>
+      </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="twelve columns" id="footerText">
-                <span >© 2016 Tim Chen</span>
-            </div>
-        </div>
-    </div>
-
-</div>
-
+  </div>
 </body>
 </html>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-72844300-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
