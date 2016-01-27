@@ -15,8 +15,12 @@ img {
 /************
   TESTING
 ************/
-  #parentHeader {
-    /*position: fixed;*/
+  #projectImages img {
+    padding-bottom: 0px;
+    margin-bottom: 25px;
+    /*max-width: 500px;*/
+    /*padding: 100px;*/
+    /*margin: 100px;*/
   }
 
 /************
